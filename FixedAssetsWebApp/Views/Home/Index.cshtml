@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+<div class="row">
+    <div class="col-lg-12">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div id="search_container">
+            <h2 class="search-assets">
+                <span class="glyphicon glyphicon-user">
+                </span>  Search Assets in Database
+            </h2>
+
+            <div class="input-group stylish-input-group">
+                <input id="search_text" type="text" class="form-control">
+                <button id="search_btn" type="button">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Result-->
+<div class="row">
+    <div class="col-md-12">
+        <div id="result_container">
+            <h3>Results:</h3>
+            <hr />
+            <div id="search_results" class="list-group">
+                <h5><em>Assets search information</em></h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+    /*JQuery search button */
+    $("#search_btn").click(function () {
+        var searchtext = $('#search_text').val();
+        $("#search_results").empty();
+        var actionUrl = '/Home/SearchResults/' + searchtext;
+        console.log(actionUrl);
+        $.getJSON(actionUrl, displayData);
+    });
+
+    $("#search_text").focus();
+
+    /*Display inquiry method */
+    function displayData(response) {
+        if (response != null) {
+            for (var i = 0; i < response.length; i++) {
+                var listitem = '<div href="#" class="list-group-item list-group-item-action col-lg-10"><h4 class="list-group-item-heading"> Asset Description: '
+                    + response[i].AssetDescription + '</h4><p class="list-group-item-text">  Asset Category: '
+                    + response[i].Category + '</h4><p class="list-group-item-text">  Asset Tax Code: '
+                    + response[i].TaxClassification + '</h4><p class="list-group-item-text">  Service Date: '
+                    + response[i].ServiceDate + '</p><p class="list-group-item-text">  Location: '
+                    + response[i].Location + '</p><p class="list-group-item-text">  Cost: '
+                    + response[i].Cost + '</p><p class="list-group-item-text">  Status: '
+                    + response[i].Status + '</p></div>';
+                $("#search_results").append(listitem);
+            }
+        }
+    }
+
+    $("#search_text").keyup(function (event) {
+        if (event.keyCode == 13) {
+            $("#search_btn").click();
+        }
+    });
+</script>
+</div>

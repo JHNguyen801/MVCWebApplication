@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixedAssetsWebApp", "FixedAssetsWebApp\FixedAssetsWebApp.csproj", "{8AE5DF2E-6C55-49AD-A9D7-BDA5D79931FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixedAssetsWebApp.Tests", "FixedAssetsWebApp.Tests\FixedAssetsWebApp.Tests.csproj", "{6F2AFEE7-15A1-4CFB-A99E-7F129E9BA5D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AE5DF2E-6C55-49AD-A9D7-BDA5D79931FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE5DF2E-6C55-49AD-A9D7-BDA5D79931FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE5DF2E-6C55-49AD-A9D7-BDA5D79931FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE5DF2E-6C55-49AD-A9D7-BDA5D79931FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F2AFEE7-15A1-4CFB-A99E-7F129E9BA5D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F2AFEE7-15A1-4CFB-A99E-7F129E9BA5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F2AFEE7-15A1-4CFB-A99E-7F129E9BA5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F2AFEE7-15A1-4CFB-A99E-7F129E9BA5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1860C1E-17CB-4A4E-97ED-9BB4C233FF13}
+	EndGlobalSection
+EndGlobal
