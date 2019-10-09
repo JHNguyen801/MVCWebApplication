@@ -18,6 +18,8 @@ namespace FixedAssetsWebApp.Models
     
         public FixedAssetsWebAppContext() : base("FixedAssetsWebAppContext")
         {
+            // Prevent EF from recreate DB has already existed
+            Database.SetInitializer<FixedAssetsWebAppContext>(null);
         }
 
         public DbSet<Assets> Assets { get; set; }
